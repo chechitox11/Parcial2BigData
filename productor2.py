@@ -26,6 +26,7 @@ def get_data():
 
     }
 
+
 def generate(stream_name, kinesis_client):
     while True:
         data = get_data()
@@ -36,5 +37,7 @@ def generate(stream_name, kinesis_client):
             PartitionKey="partitionkey"
             )
 
+
 if __name__ == '__main__':
     generate(STREAM_NAME, boto3.client('kinesis', region_name='us-east-1'))
+
