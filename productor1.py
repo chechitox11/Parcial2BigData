@@ -5,6 +5,7 @@ import boto3
 
 STREAM_NAME = "kinesisbig"
 
+
 def get_data():
 
     start_date = datetime(2023, 5, 25, 13, 0, 0)
@@ -23,6 +24,7 @@ def get_data():
         'date': formated_date,
         'close': close_value
     }
+
 
 def generate(stream_name, kinesis_client):
 
